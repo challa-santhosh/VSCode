@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .modal {
+        display: none; /* Hidden by default */
+        position: absolute; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 50%;
+        }
+
+        /* The Close Button */
+        .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        }
+        .registration-form{
+            display: grid;
+            width: 50%;
+            grid-gap: 5px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="display: grid;width: 30%;grid-gap: 4px;margin:0 auto">
+        <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="uname" required id="loginName">
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required id="loginPassword">
+    
+        <button type="button" onclick="login()" id="loginBtn">Login</button>
+        <button type="button" onclick="openForm()">Don't have an account</button>
+    </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="registration-form">
+            <h1>Registration Form</h1>
+            <label><b>Name:</b></label>
+            <input type="text" placeholder="Enter Name" name="name" required id="userName">
+            <label><b>Email:</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required id="userEmail">
+            <label><b>Address</b></label>
+            <textarea placeholder="Enter Address" name="address" required id="userAddress"></textarea>
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required id="userPassword">
+
+            <button type="button" class="btn" onclick="addUser()">Register</button>
+            <button type="button" class="btn cancel" onclick="findCoordinates()">Know your co-ordinates</button>
+          </div> 
+        </div>
+      
+      </div>
+    <script type=module src="../JS/script.js"></script>
+    <script src="../JS/login.js"></script>        
+</body>
+</html>
