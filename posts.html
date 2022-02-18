@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <link rel="stylesheet" href="../CSS/posts.css">
+</head>
+<body>
+    <ul class="nav-bar">
+        <li class="navbar-items"><h3 style="display: inline-flex;">Hello &nbsp; <span id="currentUser"></span></h3></li>
+        <li class="navbar-items" style="float: right;margin-top: 12px;
+        background-color: orange;
+        font-weight: bold;
+        border-radius: 5px;"><a href="../HTML/login.html">Logout</a></li>
+    </ul>
+    <div class="intro-div">
+        <h1>Memes</h1>
+        <p>Memes just show that people are engaged about something. A meme is just a little inside joke for a group of people that care about a certain thing.</p>
+        <p>- Anthony Fantano</p>
+        <button class="more-cls" onclick="buildPostsHtml(true)">Show More</button>
+    </div>
+    <div class="container">
+        <div class="posts-cls" id="postsId"></div>
+    </div>
+    <button id="less-cls" class="less-cls" onclick="buildPostsHtml(false)" style="display: none;margin: 20px;">Show less</button>
+    <script src="../JS/posts.js"></script>
+</body>
+</html>
